@@ -184,7 +184,8 @@ GameObject:
   - component: {fileID: 948081935}
   - component: {fileID: 948081934}
   - component: {fileID: 948081933}
-  - component: {fileID: 948081937}
+  - component: {fileID: 948081939}
+  - component: {fileID: 948081940}
   m_Layer: 0
   m_Name: Hamburger
   m_TagString: Hamburger
@@ -270,7 +271,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &948081937
+--- !u!114 &948081939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,6 +286,22 @@ MonoBehaviour:
   HamburgerMaterial:
   - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
   - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
+--- !u!114 &948081940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948081932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3c00449357fc48ab5698df6f4998b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HamburgerMaterial:
+  - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
+  - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
+  HamburgerObject: {fileID: 2019475363}
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +432,8 @@ GameObject:
   - component: {fileID: 2019475367}
   - component: {fileID: 2019475366}
   - component: {fileID: 2019475365}
-  - component: {fileID: 2019475364}
-  - component: {fileID: 2019475369}
+  - component: {fileID: 2019475370}
+  - component: {fileID: 2019475371}
   m_Layer: 0
   m_Name: Hamburger2
   m_TagString: Hamburger
@@ -424,21 +441,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2019475364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019475363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a66d0ffde445d43bf8355be66b6110, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HamburgerMaterial:
-  - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
-  - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
 --- !u!65 &2019475365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -517,7 +519,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2019475369
+--- !u!114 &2019475370
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -526,13 +528,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 2019475363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcca7dc37a5997445a89efd26a4134a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 08a66d0ffde445d43bf8355be66b6110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HamburgerOne: {fileID: 948081932}
   HamburgerMaterial:
   - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
   - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
+--- !u!114 &2019475371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019475363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f3c00449357fc48ab5698df6f4998b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HamburgerMaterial:
+  - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
+  - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
+  HamburgerObject: {fileID: 948081932}
 --- !u!1 &2138677391
 GameObject:
   m_ObjectHideFlags: 0

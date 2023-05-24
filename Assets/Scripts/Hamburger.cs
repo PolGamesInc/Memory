@@ -1,10 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hamburger : MonoBehaviour
 {
-    [SerializeField] Material[] HamburgerMaterial;
+    public Material[] HamburgerMaterial;
 
     private void Start()
     {
@@ -13,25 +12,17 @@ public class Hamburger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
-
-        StartCoroutine(WaitMaterialCloseSlot());
-
+        StartCoroutine(ChangeMaterialHamburger());
         if (gameObject.tag == "Hamburger")
         {
-            GameManagerHamburger.NameObject = "HamburgerSTR";    
-        }
-        
-        if(GameManagerHamburger.NameObject == "HamburgerSTR")
-        {
-            print(GameManagerHamburger.NameObject);
+            VariableKeeper.CountHamburger++;
         }
     }
 
-    public IEnumerator WaitMaterialCloseSlot()
+    private IEnumerator ChangeMaterialHamburger()
     {
+        gameObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
         yield return new WaitForSeconds(0.7f);
         gameObject.GetComponent<Renderer>().material = HamburgerMaterial[0];
     }
-
 }

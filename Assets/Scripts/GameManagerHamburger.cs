@@ -1,8 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public static class GameManagerHamburger
+public class GameManagerHamburger : MonoBehaviour
 {
-    public static string NameObject;
+    [SerializeField] private Material[] HamburgerMaterial;
+    [SerializeField] private GameObject HamburgerObject;
+
+    private void OnMouseDown()
+    {
+      if(VariableKeeper.CountHamburger == 2)
+      {
+         HamburgerObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
+         gameObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
+         print("победа");
+      }
+    }
 }
