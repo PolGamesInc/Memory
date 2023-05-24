@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Hamburger : MonoBehaviour
 {
-    public Material[] HamburgerMaterial;
+    [SerializeField] private Material[] HamburgerMaterial;
 
     private void Start()
     {
