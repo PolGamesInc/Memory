@@ -20,8 +20,8 @@ public class GameManagerHamburger : MonoBehaviour
     private IEnumerator StartParticleBoom()
     {
        yield return new WaitForSeconds(0.7f);
-       HamburgerObject.transform.position = new Vector3(-8, transform.position.y, transform.position.z);
-       gameObject.transform.position = new Vector3(-8, transform.position.y, transform.position.z);
+       HamburgerObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
+       gameObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
        for (int i = 0; i < CartoonBoom.Length; i++)
        {
           CartoonBoom[i].Play();
