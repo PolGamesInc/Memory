@@ -25,14 +25,8 @@ public class GameManagerHamburger : MonoBehaviour
        for (int i = 0; i < CartoonBoom.Length; i++)
        {
           CartoonBoom[i].Play();
-          StartCoroutine(WaitStopParticleBoom());
+          Invoke("StopParticleBoom", 1f);
        }
-    }
-
-    private IEnumerator WaitStopParticleBoom()
-    {
-        yield return new WaitForSeconds(1f);
-        StopParticleBoom();
     }
 
     private void StopParticleBoom()
