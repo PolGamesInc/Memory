@@ -3,31 +3,43 @@ using UnityEngine;
 
 public class GameManagerHamburger : MonoBehaviour
 {
-    [SerializeField] private Material[] HamburgerMaterial;
     [SerializeField] private GameObject HamburgerObject;
+
+    [SerializeField] private Material[] HamburgerMaterial;
     [SerializeField] private ParticleSystem[] CartoonBoom;
 
     private void OnMouseDown()
     {
-      StartCoroutine(WaitHamburgerSC());
-      if(VariableKeeper.CountHamburger == 2)
+      if (VariableKeeper.CountHamburger == 2)
       {
+         StartCoroutine(StartParticleBoom());
          HamburgerObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
-         print("победа");
       }
     }
 
-    private IEnumerator WaitHamburgerSC()
+    private IEnumerator StartParticleBoom()
     {
-        if(VariableKeeper.CountHamburger == 2)
+       yield return new WaitForSeconds(0.7f);
+       HamburgerObject.transform.position = new Vector3(-8, transform.position.y, transform.position.z);
+       gameObject.transform.position = new Vector3(-8, transform.position.y, transform.position.z);
+       for (int i = 0; i < CartoonBoom.Length; i++)
+       {
+          CartoonBoom[i].Play();
+          StartCoroutine(WaitStopParticleBoom());
+       }
+    }
+
+    private IEnumerator WaitStopParticleBoom()
+    {
+        yield return new WaitForSeconds(1f);
+        StopParticleBoom();
+    }
+
+    private void StopParticleBoom()
+    {
+        for(int i = 0; i < CartoonBoom.Length; i++)
         {
-            yield return new WaitForSeconds(0.7f);
-            HamburgerObject.SetActive(false);
-            gameObject.SetActive(false);
-            for(int i = 0; i < CartoonBoom.Length; i++)
-            {
-                CartoonBoom[i].Play();
-            }
+            CartoonBoom[i].Stop();
         }
     }
 }

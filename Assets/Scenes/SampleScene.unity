@@ -549,10 +549,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f3c00449357fc48ab5698df6f4998b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HamburgerObject: {fileID: 2019475363}
   HamburgerMaterial:
   - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
   - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
-  HamburgerObject: {fileID: 2019475363}
   CartoonBoom:
   - {fileID: 126644435}
   - {fileID: 142010029}
@@ -615,6 +615,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -662,6 +666,14 @@ PrefabInstance:
     - target: {fileID: 19800002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].cycleCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].repeatInterval
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 19900002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
       propertyPath: m_Enabled
@@ -1086,10 +1098,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f3c00449357fc48ab5698df6f4998b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HamburgerObject: {fileID: 948081932}
   HamburgerMaterial:
   - {fileID: 2100000, guid: 464b1df946f0f604287c529a5a1a2d17, type: 2}
   - {fileID: 2100000, guid: f49c56b0d36ca10449b75479b20b16d6, type: 2}
-  HamburgerObject: {fileID: 948081932}
   CartoonBoom:
   - {fileID: 126644435}
   - {fileID: 142010029}
