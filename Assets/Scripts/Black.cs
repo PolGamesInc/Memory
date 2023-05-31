@@ -28,6 +28,13 @@ public class Black : MonoBehaviour
             VariableKeeper.CountBlue = 0;
             VariableKeeper.CountViolet = 0;
             VariableKeeper.CountBrown = 0;
+            VariableKeeper.CountDarkGreen = 0;
+            VariableKeeper.CountBurgundy = 0;
+            VariableKeeper.CountDarkBlue = 0;
+            VariableKeeper.CountDarkPink = 0;
+            VariableKeeper.CountLightBlue = 0;
+            VariableKeeper.CountSilver = 0;
+            VariableKeeper.CountLightGreen = 0;
         }
     }
 

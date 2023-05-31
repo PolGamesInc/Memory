@@ -1,27 +1,28 @@
 using System.Collections;
 using UnityEngine;
 
-public class Yellow : MonoBehaviour
+public class Burgundy : MonoBehaviour
 {
-    [SerializeField] private Material[] YellowMaterial;
+    [SerializeField] private Material[] BurgundyMaterial;
 
     private void Start()
     {
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[0];
+        gameObject.GetComponent<Renderer>().material = BurgundyMaterial[0];
     }
 
     private void OnMouseDown()
     {
-        StartCoroutine(ChangeMaterialYellow());
-        if (gameObject.tag == "Yellow")
+        StartCoroutine(ChangeMaterialBurgundy());
+        if (gameObject.tag == "Burgundy")
         {
-            VariableKeeper.CountYellow++;
+            VariableKeeper.CountBurgundy++;
         }
 
-        if (VariableKeeper.CountYellow == 1)
+        if (VariableKeeper.CountBurgundy == 1)
         {
             VariableKeeper.CountGreen = 0;
             VariableKeeper.CountPink = 0;
+            VariableKeeper.CountYellow = 0;
             VariableKeeper.CountOrange = 0;
             VariableKeeper.CountRed = 0;
             VariableKeeper.CountBlue = 0;
@@ -29,7 +30,6 @@ public class Yellow : MonoBehaviour
             VariableKeeper.CountBlack = 0;
             VariableKeeper.CountBrown = 0;
             VariableKeeper.CountDarkGreen = 0;
-            VariableKeeper.CountBurgundy = 0;
             VariableKeeper.CountDarkBlue = 0;
             VariableKeeper.CountDarkPink = 0;
             VariableKeeper.CountLightBlue = 0;
@@ -38,10 +38,10 @@ public class Yellow : MonoBehaviour
         }
     }
 
-    private IEnumerator ChangeMaterialYellow()
+    private IEnumerator ChangeMaterialBurgundy()
     {
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[1];
+        gameObject.GetComponent<Renderer>().material = BurgundyMaterial[1];
         yield return new WaitForSeconds(0.7f);
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[0];
+        gameObject.GetComponent<Renderer>().material = BurgundyMaterial[0];
     }
 }

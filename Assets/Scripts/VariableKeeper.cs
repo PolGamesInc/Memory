@@ -9,4 +9,11 @@ public static class VariableKeeper
     public static int CountViolet;
     public static int CountBlack;
     public static int CountBrown;
+    public static int CountDarkGreen;
+    public static int CountBurgundy;
+    public static int CountDarkBlue;
+    public static int CountDarkPink;
+    public static int CountLightBlue;
+    public static int CountSilver;
+    public static int CountLightGreen;
 }

@@ -1,27 +1,28 @@
 using System.Collections;
 using UnityEngine;
 
-public class Yellow : MonoBehaviour
+public class Silver : MonoBehaviour
 {
-    [SerializeField] private Material[] YellowMaterial;
+    [SerializeField] private Material[] SilverMaterial;
 
     private void Start()
     {
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[0];
+        gameObject.GetComponent<Renderer>().material = SilverMaterial[0];
     }
 
     private void OnMouseDown()
     {
-        StartCoroutine(ChangeMaterialYellow());
-        if (gameObject.tag == "Yellow")
+        StartCoroutine(ChangeMaterialSilver());
+        if (gameObject.tag == "Silver")
         {
-            VariableKeeper.CountYellow++;
+            VariableKeeper.CountSilver++;
         }
 
-        if (VariableKeeper.CountYellow == 1)
+        if (VariableKeeper.CountSilver == 1)
         {
             VariableKeeper.CountGreen = 0;
             VariableKeeper.CountPink = 0;
+            VariableKeeper.CountYellow = 0;
             VariableKeeper.CountOrange = 0;
             VariableKeeper.CountRed = 0;
             VariableKeeper.CountBlue = 0;
@@ -33,15 +34,14 @@ public class Yellow : MonoBehaviour
             VariableKeeper.CountDarkBlue = 0;
             VariableKeeper.CountDarkPink = 0;
             VariableKeeper.CountLightBlue = 0;
-            VariableKeeper.CountSilver = 0;
             VariableKeeper.CountLightGreen = 0;
         }
     }
 
-    private IEnumerator ChangeMaterialYellow()
+    private IEnumerator ChangeMaterialSilver()
     {
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[1];
+        gameObject.GetComponent<Renderer>().material = SilverMaterial[1];
         yield return new WaitForSeconds(0.7f);
-        gameObject.GetComponent<Renderer>().material = YellowMaterial[0];
+        gameObject.GetComponent<Renderer>().material = SilverMaterial[0];
     }
 }
