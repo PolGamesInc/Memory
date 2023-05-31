@@ -1,26 +1,26 @@
 using System.Collections;
 using UnityEngine;
 
-public class GameManagerPizza : MonoBehaviour
+public class GameManagerPink : MonoBehaviour
 {
-    [SerializeField] private GameObject PizzaObject;
+    [SerializeField] private GameObject PinkObject;
 
-    [SerializeField] private Material[] PizzaMaterial;
+    [SerializeField] private Material PinkMaterial;
     [SerializeField] private ParticleSystem[] CartoonBoom;
 
     private void OnMouseDown()
     {
-        if (VariableKeeper.CountPizza == 2)
+        if (VariableKeeper.CountPink == 2)
         {
             StartCoroutine(StartParticleBoom());
-            PizzaObject.GetComponent<Renderer>().material = PizzaMaterial[1];
+            PinkObject.GetComponent<Renderer>().material = PinkMaterial;
         }
     }
 
     private IEnumerator StartParticleBoom()
     {
         yield return new WaitForSeconds(0.7f);
-        PizzaObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
+        PinkObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
         gameObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
         for (int i = 0; i < CartoonBoom.Length; i++)
         {

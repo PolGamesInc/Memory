@@ -1,26 +1,26 @@
 using System.Collections;
 using UnityEngine;
 
-public class GameManagerHamburger : MonoBehaviour
+public class GameManagerGreen : MonoBehaviour
 {
-    [SerializeField] private GameObject HamburgerObject;
+    [SerializeField] private GameObject GreenObject;
 
-    [SerializeField] private Material[] HamburgerMaterial;
+    [SerializeField] private Material GreenMaterial;
     [SerializeField] private ParticleSystem[] CartoonBoom;
 
     private void OnMouseDown()
     {
-      if (VariableKeeper.CountHamburger == 2)
+      if (VariableKeeper.CountGreen == 2)
       {
          StartCoroutine(StartParticleBoom());
-         HamburgerObject.GetComponent<Renderer>().material = HamburgerMaterial[1];
+         GreenObject.GetComponent<Renderer>().material = GreenMaterial;
       }
     }
 
     private IEnumerator StartParticleBoom()
     {
        yield return new WaitForSeconds(0.7f);
-       HamburgerObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
+       GreenObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
        gameObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
        for (int i = 0; i < CartoonBoom.Length; i++)
        {
