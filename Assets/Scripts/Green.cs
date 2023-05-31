@@ -5,6 +5,8 @@ public class Green : MonoBehaviour
 {
     [SerializeField] private Material[] GreenMaterial;
 
+    private float LastClickTime;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = GreenMaterial[0];
@@ -13,7 +15,7 @@ public class Green : MonoBehaviour
     private void OnMouseDown()
     {
         StartCoroutine(ChangeMaterialGreen());
-        if (gameObject.tag == "Hamburger")
+        if (gameObject.tag == "Green")
         {
             VariableKeeper.CountGreen++;
         }
@@ -21,6 +23,13 @@ public class Green : MonoBehaviour
         if(VariableKeeper.CountGreen == 1)
         {
             VariableKeeper.CountPink = 0;
+            VariableKeeper.CountYellow = 0;
+            VariableKeeper.CountOrange = 0;
+            VariableKeeper.CountRed = 0;
+            VariableKeeper.CountBlue = 0;
+            VariableKeeper.CountViolet = 0;
+            VariableKeeper.CountBlack = 0;
+            VariableKeeper.CountBrown = 0;
         }
     }
 

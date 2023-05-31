@@ -1,0 +1,40 @@
+using System.Collections;
+using UnityEngine;
+
+public class Red : MonoBehaviour
+{
+    [SerializeField] private Material[] RedMaterial;
+
+    private void Start()
+    {
+        gameObject.GetComponent<Renderer>().material = RedMaterial[0];
+    }
+
+    private void OnMouseDown()
+    {
+        StartCoroutine(ChangeMaterialRed());
+        if (gameObject.tag == "Red")
+        {
+            VariableKeeper.CountRed++;
+        }
+
+        if (VariableKeeper.CountRed == 1)
+        {
+            VariableKeeper.CountGreen = 0;
+            VariableKeeper.CountPink = 0;
+            VariableKeeper.CountYellow = 0;
+            VariableKeeper.CountOrange = 0;
+            VariableKeeper.CountBlue = 0;
+            VariableKeeper.CountViolet = 0;
+            VariableKeeper.CountBlack = 0;
+            VariableKeeper.CountBrown = 0;
+        }
+    }
+
+    private IEnumerator ChangeMaterialRed()
+    {
+        gameObject.GetComponent<Renderer>().material = RedMaterial[1];
+        yield return new WaitForSeconds(0.7f);
+        gameObject.GetComponent<Renderer>().material = RedMaterial[0];
+    }
+}

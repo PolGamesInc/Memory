@@ -13,14 +13,21 @@ public class Pink : MonoBehaviour
     private void OnMouseDown()
     {
         StartCoroutine(ChangeMaterialPink());
-        if (gameObject.tag == "Pizza")
+        if (gameObject.tag == "Pink")
         {
             VariableKeeper.CountPink++;
         }
 
         if(VariableKeeper.CountPink == 1)
         {
-            VariableKeeper.CountGreen = 0; 
+            VariableKeeper.CountGreen = 0;
+            VariableKeeper.CountOrange = 0;
+            VariableKeeper.CountYellow = 0;
+            VariableKeeper.CountRed = 0;
+            VariableKeeper.CountBlue = 0;
+            VariableKeeper.CountViolet = 0;
+            VariableKeeper.CountBlack = 0;
+            VariableKeeper.CountBrown = 0;
         }
     }
 

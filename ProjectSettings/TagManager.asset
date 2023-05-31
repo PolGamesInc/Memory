@@ -4,8 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Hamburger
-  - Pizza
+  - Yellow
+  - Pink
+  - Green
+  - Orange
+  - Red
+  - Blue
+  - Violet
+  - Black
+  - Brown
   layers:
   - Default
   - TransparentFX
