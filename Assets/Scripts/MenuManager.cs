@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    private string NameScene = "HardLevel";
+    private string HardLevel = "HardLevel";
+    private string EasilyLevel = "EasilyLevel";
+    private string NormalLevel = "NormalLevel";
 
     public void LoadHardLevel()
     {
-        SceneManager.LoadScene(NameScene);
+        SceneManager.LoadScene(HardLevel);
+    }
+
+    public void LoadEasilyLevel()
+    {
+        SceneManager.LoadScene(EasilyLevel);
+    }
+
+    public void LoadNormalLevel()
+    {
+        SceneManager.LoadScene(NormalLevel);
     }
 }

@@ -4,20 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TimerHard : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-    [SerializeField] private float Timer = 120f;
+    [SerializeField] private float TimerGame;
     [SerializeField] private Text[] timerText;
-    [SerializeField] private string LoseScene = "YouLose";
+
+    private string LoseScene = "YouLose";
 
     private void Update()
     {
         for (int i = 0; i < timerText.Length; i++)
         {
-            timerText[i].text = Timer.ToString();
+            timerText[i].text = TimerGame.ToString();
         }
 
-        if(Timer == 0)
+        if(TimerGame == 0)
         {
             SceneManager.LoadScene(LoseScene);
         }
@@ -33,7 +34,7 @@ public class TimerHard : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            Timer--;
+            TimerGame--;
         }
     }
 }

@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class WinScene : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> AllObject;
-    [SerializeField] private float _target;
+    private string NameScene = "Menu";
 
-    private string NameScene = "YouWin";
-
-    private void Update()
+    private void Start()
     {
-        if (AllObject.All(obj => obj.transform.position.x.Equals(_target)))
-        {
-            SceneManager.LoadScene(NameScene);
-        }
+        StartCoroutine(WaitRestartMenu());
+    }
+
+    private IEnumerator WaitRestartMenu()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(NameScene);
     }
 }
