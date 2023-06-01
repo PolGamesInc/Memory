@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private string NameScene = "HardLevel";
+    private string NameScene = "HardLevel";
 
     public void LoadHardLevel()
     {

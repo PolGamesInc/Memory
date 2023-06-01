@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoseScene : MonoBehaviour
 {
-    [SerializeField] private string MenuScene = "Menu";
+    private string MenuScene = "Menu";
 
     private void Start()
     {

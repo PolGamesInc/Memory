@@ -2651,7 +2651,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &706029193
 PrefabInstance:
@@ -2859,6 +2859,7 @@ GameObject:
   - component: {fileID: 801636187}
   - component: {fileID: 801636186}
   - component: {fileID: 801636190}
+  - component: {fileID: 801636191}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2965,6 +2966,53 @@ MonoBehaviour:
   timerText:
   - {fileID: 2013448762}
   - {fileID: 1083496276}
+  LoseScene: YouLose
+--- !u!114 &801636191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801636185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cba925a7dbca14297ab53d688b3424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllObject:
+  - {fileID: 2019475363}
+  - {fileID: 948081932}
+  - {fileID: 2110094939}
+  - {fileID: 1796968678}
+  - {fileID: 763330834}
+  - {fileID: 1891864141}
+  - {fileID: 2049105290}
+  - {fileID: 488636788}
+  - {fileID: 366753442}
+  - {fileID: 965235577}
+  - {fileID: 1194409801}
+  - {fileID: 1996658407}
+  - {fileID: 619112387}
+  - {fileID: 1225841385}
+  - {fileID: 1182602921}
+  - {fileID: 1861629590}
+  - {fileID: 1736463095}
+  - {fileID: 1747855487}
+  - {fileID: 969963914}
+  - {fileID: 555012113}
+  - {fileID: 624074056}
+  - {fileID: 184863467}
+  - {fileID: 501154987}
+  - {fileID: 1571162039}
+  - {fileID: 2114523171}
+  - {fileID: 1851539391}
+  - {fileID: 1668954243}
+  - {fileID: 571700846}
+  - {fileID: 1417285779}
+  - {fileID: 1097781965}
+  - {fileID: 146369317}
+  - {fileID: 208277733}
+  _target: -100
 --- !u!198 &837091801 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19800002, guid: f527e6aea0ac92147b31a4b6a30579ca, type: 3}
@@ -3279,7 +3327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &948081939
 MonoBehaviour:
@@ -6567,7 +6615,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2019475370
 MonoBehaviour:
