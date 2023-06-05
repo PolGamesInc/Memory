@@ -4,8 +4,8 @@ using UnityEngine;
 public class Red : MonoBehaviour
 {
     [SerializeField] private Material[] RedMaterial;
-    
-    private BoxCollider BoxColliderRed; 
+
+    private BoxCollider BoxColliderRed;
 
     private void Start()
     {

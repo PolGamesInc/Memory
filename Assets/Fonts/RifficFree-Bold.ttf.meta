@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 322827696ec4ba2498c7344e084ffe0b
+guid: 44d262230e9c23f4399ee4f812b5428f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Alkalami
+  - My Font
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

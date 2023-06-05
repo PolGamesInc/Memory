@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9197d6541d2da647a94a9eb82e3cb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuScene: Menu
 --- !u!114 &1097641052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,12 +336,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -417,16 +416,16 @@ RectTransform:
   m_GameObject: {fileID: 1196155657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1097641055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 203, y: -141}
-  m_SizeDelta: {x: 1101, y: 514}
+  m_AnchorMin: {x: 0.62200004, y: 0.47500002}
+  m_AnchorMax: {x: 0.62200004, y: 0.47500002}
+  m_AnchoredPosition: {x: -3, y: -2}
+  m_SizeDelta: {x: 1121.7356, y: 185.7437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196155659
 MonoBehaviour:
@@ -449,8 +448,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 322827696ec4ba2498c7344e084ffe0b, type: 3}
-    m_FontSize: 150
+    m_Font: {fileID: 12800000, guid: 44d262230e9c23f4399ee4f812b5428f, type: 3}
+    m_FontSize: 130
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -461,7 +460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You lose...
+  m_Text: "\u041F\u0440\u043E\u0438\u0433\u0440\u044B\u0448..."
 --- !u!222 &1196155660
 CanvasRenderer:
   m_ObjectHideFlags: 0
