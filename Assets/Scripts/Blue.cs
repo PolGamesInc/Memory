@@ -5,9 +5,20 @@ public class Blue : MonoBehaviour
 {
     [SerializeField] private Material[] BlueMaterial;
 
+    private BoxCollider BoxColliderBlue;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = BlueMaterial[0];
+        BoxColliderBlue = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountBlue == 0)
+        {
+            BoxColliderBlue.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Blue : MonoBehaviour
         if (gameObject.tag == "Blue")
         {
             VariableKeeper.CountBlue++;
+            BoxColliderBlue.enabled = false;
         }
 
         if (VariableKeeper.CountBlue == 1)

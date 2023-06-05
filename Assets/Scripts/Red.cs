@@ -4,10 +4,21 @@ using UnityEngine;
 public class Red : MonoBehaviour
 {
     [SerializeField] private Material[] RedMaterial;
+    
+    private BoxCollider BoxColliderRed; 
 
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = RedMaterial[0];
+        BoxColliderRed = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if (VariableKeeper.CountRed == 0)
+        {
+            BoxColliderRed.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Red : MonoBehaviour
         if (gameObject.tag == "Red")
         {
             VariableKeeper.CountRed++;
+            BoxColliderRed.enabled = false;
         }
 
         if (VariableKeeper.CountRed == 1)

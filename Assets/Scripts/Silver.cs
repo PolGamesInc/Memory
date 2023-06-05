@@ -5,9 +5,20 @@ public class Silver : MonoBehaviour
 {
     [SerializeField] private Material[] SilverMaterial;
 
+    private BoxCollider BoxColliderSilver;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = SilverMaterial[0];
+        BoxColliderSilver = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountSilver == 0)
+        {
+            BoxColliderSilver.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Silver : MonoBehaviour
         if (gameObject.tag == "Silver")
         {
             VariableKeeper.CountSilver++;
+            BoxColliderSilver.enabled = false;
         }
 
         if (VariableKeeper.CountSilver == 1)

@@ -5,11 +5,20 @@ public class Green : MonoBehaviour
 {
     [SerializeField] private Material[] GreenMaterial;
 
-    private float LastClickTime;
+    private BoxCollider BoxColliderGreen;
 
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = GreenMaterial[0];
+        BoxColliderGreen = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountGreen == 0)
+        {
+            BoxColliderGreen.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -18,6 +27,7 @@ public class Green : MonoBehaviour
         if (gameObject.tag == "Green")
         {
             VariableKeeper.CountGreen++;
+            BoxColliderGreen.enabled = false;
         }
 
         if(VariableKeeper.CountGreen == 1)

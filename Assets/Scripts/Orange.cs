@@ -5,9 +5,20 @@ public class Orange : MonoBehaviour
 {
     [SerializeField] private Material[] OrangeMaterial;
 
+    private BoxCollider BoxColliderOrange;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = OrangeMaterial[0];
+        BoxColliderOrange = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountOrange == 0)
+        {
+            BoxColliderOrange.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Orange : MonoBehaviour
         if (gameObject.tag == "Orange")
         {
             VariableKeeper.CountOrange++;
+            BoxColliderOrange.enabled = false;
         }
 
         if (VariableKeeper.CountOrange == 1)

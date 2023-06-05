@@ -5,9 +5,20 @@ public class Brown : MonoBehaviour
 {
     [SerializeField] private Material[] BrownMaterial;
 
+    private BoxCollider BoxColliderBrown;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = BrownMaterial[0];
+        BoxColliderBrown = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountBrown == 0)
+        {
+            BoxColliderBrown.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Brown : MonoBehaviour
         if (gameObject.tag == "Brown")
         {
             VariableKeeper.CountBrown++;
+            BoxColliderBrown.enabled = false;
         }
 
         if (VariableKeeper.CountBrown == 1)

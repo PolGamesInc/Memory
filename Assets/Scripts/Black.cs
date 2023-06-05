@@ -5,9 +5,20 @@ public class Black : MonoBehaviour
 {
     [SerializeField] private Material[] BlackMaterial;
 
+    private BoxCollider BoxColliderBlack;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = BlackMaterial[0];
+        BoxColliderBlack = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountBlack == 0)
+        {
+            BoxColliderBlack.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Black : MonoBehaviour
         if (gameObject.tag == "Black")
         {
             VariableKeeper.CountBlack++;
+            BoxColliderBlack.enabled = false;
         }
 
         if (VariableKeeper.CountBlack == 1)

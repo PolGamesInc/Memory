@@ -5,9 +5,20 @@ public class Violet : MonoBehaviour
 {
     [SerializeField] private Material[] VioletMaterial;
 
+    private BoxCollider BoxColliderViolet;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = VioletMaterial[0];
+        BoxColliderViolet = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountViolet == 0)
+        {
+            BoxColliderViolet.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Violet : MonoBehaviour
         if (gameObject.tag == "Violet")
         {
             VariableKeeper.CountViolet++;
+            BoxColliderViolet.enabled = false;
         }
 
         if (VariableKeeper.CountViolet == 1)

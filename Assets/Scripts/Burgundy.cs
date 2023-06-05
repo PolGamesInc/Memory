@@ -5,9 +5,20 @@ public class Burgundy : MonoBehaviour
 {
     [SerializeField] private Material[] BurgundyMaterial;
 
+    private BoxCollider BoxColliderBurgundy;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = BurgundyMaterial[0];
+        BoxColliderBurgundy = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountBurgundy == 0)
+        {
+            BoxColliderBurgundy.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Burgundy : MonoBehaviour
         if (gameObject.tag == "Burgundy")
         {
             VariableKeeper.CountBurgundy++;
+            BoxColliderBurgundy.enabled = false;
         }
 
         if (VariableKeeper.CountBurgundy == 1)

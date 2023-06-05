@@ -5,9 +5,20 @@ public class Pink : MonoBehaviour
 {
     [SerializeField] private Material[] PinkMaterial;
 
+    private BoxCollider BoxColliderPink;
+
     private void Start()
     {
         gameObject.GetComponent<Renderer>().material = PinkMaterial[0];
+        BoxColliderPink = GetComponent<BoxCollider>();
+    }
+
+    private void Update()
+    {
+        if(VariableKeeper.CountPink == 0)
+        {
+            BoxColliderPink.enabled = true;
+        }
     }
 
     private void OnMouseDown()
@@ -16,6 +27,7 @@ public class Pink : MonoBehaviour
         if (gameObject.tag == "Pink")
         {
             VariableKeeper.CountPink++;
+            BoxColliderPink.enabled = false;
         }
 
         if(VariableKeeper.CountPink == 1)
