@@ -53,7 +53,7 @@ public class DarkGreen : MonoBehaviour
     private IEnumerator ChangeMaterialDarkGreen()
     {
         gameObject.GetComponent<Renderer>().material = DarkGreenMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = DarkGreenMaterial[0];
     }
 }

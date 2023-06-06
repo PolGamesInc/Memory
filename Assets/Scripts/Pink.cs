@@ -53,7 +53,7 @@ public class Pink : MonoBehaviour
     private IEnumerator ChangeMaterialPink()
     {
         gameObject.GetComponent<Renderer>().material = PinkMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = PinkMaterial[0];
     }
 }

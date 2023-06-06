@@ -53,7 +53,7 @@ public class Violet : MonoBehaviour
     private IEnumerator ChangeMaterialViolet()
     {
         gameObject.GetComponent<Renderer>().material = VioletMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = VioletMaterial[0];
     }
 }

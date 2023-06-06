@@ -53,7 +53,7 @@ public class Blue : MonoBehaviour
     private IEnumerator ChangeMaterialBlue()
     {
         gameObject.GetComponent<Renderer>().material = BlueMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = BlueMaterial[0];
     }
 }

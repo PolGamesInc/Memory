@@ -19,7 +19,7 @@ public class GameManagerLightBlue : MonoBehaviour
 
     private IEnumerator StartParticleBoom()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         LightBlueObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
         gameObject.transform.position = new Vector3(-100, transform.position.y, transform.position.z);
         for (int i = 0; i < CartoonBoom.Length; i++)

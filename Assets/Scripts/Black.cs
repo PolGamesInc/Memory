@@ -53,7 +53,7 @@ public class Black : MonoBehaviour
     private IEnumerator ChangeMaterialBlack()
     {
         gameObject.GetComponent<Renderer>().material = BlackMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = BlackMaterial[0];
     }
 }

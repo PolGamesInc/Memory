@@ -2,19 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinScene : MonoBehaviour
 {
     private string NameScene = "Menu";
+    private float TimeExit = 5;
+
+    [SerializeField] private Text TimerExitText;
 
     private void Start()
     {
-        StartCoroutine(WaitRestartMenu());
+        StartCoroutine(subtractTimer());
     }
 
-    private IEnumerator WaitRestartMenu()
+    private void Update()
     {
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(NameScene);
+        TimerExitText.text = TimeExit.ToString();
+        if(TimeExit == 0)
+        {
+            SceneManager.LoadScene(NameScene);
+        }
+    }
+
+    private IEnumerator subtractTimer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            TimeExit--;
+        }
     }
 }

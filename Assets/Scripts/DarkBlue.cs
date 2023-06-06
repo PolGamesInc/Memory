@@ -53,7 +53,7 @@ public class DarkBlue : MonoBehaviour
     private IEnumerator ChangeMaterialDarkBlue()
     {
         gameObject.GetComponent<Renderer>().material = DarkBlueMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = DarkBlueMaterial[0];
     }
 }

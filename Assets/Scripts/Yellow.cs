@@ -53,7 +53,7 @@ public class Yellow : MonoBehaviour
     private IEnumerator ChangeMaterialYellow()
     {
         gameObject.GetComponent<Renderer>().material = YellowMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = YellowMaterial[0];
     }
 }

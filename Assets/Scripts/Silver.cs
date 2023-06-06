@@ -53,7 +53,7 @@ public class Silver : MonoBehaviour
     private IEnumerator ChangeMaterialSilver()
     {
         gameObject.GetComponent<Renderer>().material = SilverMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = SilverMaterial[0];
     }
 }

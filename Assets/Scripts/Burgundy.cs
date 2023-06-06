@@ -53,7 +53,7 @@ public class Burgundy : MonoBehaviour
     private IEnumerator ChangeMaterialBurgundy()
     {
         gameObject.GetComponent<Renderer>().material = BurgundyMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = BurgundyMaterial[0];
     }
 }

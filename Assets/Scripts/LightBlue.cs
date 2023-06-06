@@ -53,7 +53,7 @@ public class LightBlue : MonoBehaviour
     private IEnumerator ChangeMaterialLightBlue()
     {
         gameObject.GetComponent<Renderer>().material = LightBlueMaterial[1];
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         gameObject.GetComponent<Renderer>().material = LightBlueMaterial[0];
     }
 }
