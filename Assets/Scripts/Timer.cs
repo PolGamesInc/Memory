@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private float TimerGame;
     [SerializeField] private Text[] timerText;
 
-    private string LoseScene = "YouLose";
+    [SerializeField] private string LoseScene = "YouLose";
 
     private void Update()
     {

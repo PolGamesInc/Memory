@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WinScene : MonoBehaviour
 {
-    private string NameScene = "Menu";
+    [SerializeField] private string NameScene = "Menu";
     private float TimeExit = 5;
 
     [SerializeField] private Text TimerExitText;

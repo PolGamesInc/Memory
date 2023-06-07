@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class MenuTwoManager : MonoBehaviour
 {
-    [SerializeField] private string HardLevel;
-    [SerializeField] private string EasilyLevel;
-    [SerializeField] private string NormalLevel;
+    private string HardLevel = "HardLevelTwo";
+    private string EasilyLevel = "EasilyLevelTwo";
+    private string NormalLevel = "NormalLevelTwo";
 
     public void LoadHardLevel()
     {

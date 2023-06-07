@@ -8,8 +8,7 @@ public class GoWinScene : MonoBehaviour
 {
     [SerializeField] private List<GameObject> AllObject;
     [SerializeField] private float _target;
-
-    private string NameScene = "YouWin";
+    [SerializeField] private string NameScene = "YouWin";
 
     private void Update()
     {

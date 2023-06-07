@@ -18,15 +18,45 @@ EditorBuildSettings:
     path: Assets/Scenes/EasilyLevel.unity
     guid: def120ee777e2d54681733186d65db7a
   - enabled: 1
+    path: Assets/Scenes/EasilyLevelTwo.unity
+    guid: 5fe599205475a5c41a6b2ef59241658f
+  - enabled: 1
+    path: Assets/Scenes/EasilyLevelThree.unity
+    guid: 44b5430c613426447b320e723961bfce
+  - enabled: 1
     path: Assets/Scenes/NormalLevel.unity
     guid: e444e3f864b30ce41a5bc8c754a31bd5
+  - enabled: 1
+    path: Assets/Scenes/NormalLevelTwo.unity
+    guid: a31559bae10972546bbf3c02751daec5
+  - enabled: 1
+    path: Assets/Scenes/NormalLevelThree.unity
+    guid: 4b3eea311e1f2fa46899961d526864d1
   - enabled: 1
     path: Assets/Scenes/HardLevel.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
+    path: Assets/Scenes/HardLevelTwo.unity
+    guid: 15289108670546e4ba333273832417fc
+  - enabled: 1
+    path: Assets/Scenes/HardLevelThree.unity
+    guid: 6a39a64e95bd41440866cbdfe9013a33
+  - enabled: 1
     path: Assets/Scenes/YouLose.unity
     guid: 70356ba50269f894e95f4bcbc3f60ac6
   - enabled: 1
+    path: Assets/Scenes/YouLose2.unity
+    guid: 759a4cd00ba465f4a8200c82ede89746
+  - enabled: 1
+    path: Assets/Scenes/YouLose3.unity
+    guid: a7b040c815273d3448746e21b11b054a
+  - enabled: 1
     path: Assets/Scenes/YouWin.unity
     guid: 1b06b5de57e03ae4981eccbc7de6cb36
+  - enabled: 1
+    path: Assets/Scenes/YouWin2.unity
+    guid: e6f4982fc8c83c04792b8c120070099f
+  - enabled: 1
+    path: Assets/Scenes/YouWin3.unity
+    guid: 9a070760eabc5494ab49838ba404fb74
   m_configObjects: {}

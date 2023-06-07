@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class LoseScene : MonoBehaviour
 {
-    private string MenuScene = "Menu";
     private float TimeExit = 5;
 
+    [SerializeField] private string MenuScene = "Menu";
     [SerializeField] private Text TimerExitText;
 
     private void Start()
